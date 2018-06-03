@@ -28,7 +28,7 @@ O ..... entra em modo de inserção uma linha acima
 
 
 ## Delete
-
+```
 
 dd .... deleta linha atual
 D ..... deleta restante da linha
@@ -59,12 +59,12 @@ dip .. apaga o parágrafo atual
 d4b .. apaga as quatro palavras anteriores
 dfx .. apaga até o próximo ``x''
 d/casa/+1 - deleta até a linha após a palavra casa
-
+```
 
 
 ## Copiar
 
-
+```
 yy .... copia a linha atual
 Y ..... copia a linha atual
 ye .... copia do cursor ao fim da palavra
@@ -84,45 +84,45 @@ yi" .... copia trecho entre aspas (atual - inner)
 vip .... seleção visual para parágrafo atual `inner paragraph'
 yip .... copia o parágrafo atual
 yit .... copia a tag atual `inner tag' útil para arquivos HTML, XML, etc.
-
+```
 
 
 ## Colar
 
-
+```
 p .... cola o que foi copiado ou deletado abaixo
 P .... cola o que foi copiado ou deletado acima
 [p ... cola o que foi copiado ou deletado antes do cursor
 ]p ... cola o que foi copiado ou deletado após o cursor
-""”
+```
 
 ## Mudançna
 
-
+```
 ciw .............. modifica uma palavra
 cip .............. modifica um parágrafo
 cis .............. modifica uma sentença
 C ................ modifica até o final da linha
-
+```
 
 
 ## Convertendo para maiúsculas
-
+```
 gUU ....... converte a linha para maiúsculo
 guu ....... converte a linha para minúsculo
 gUiw ...... converte a palavra atual para maiúsculo
 ~ ......... altera o case do caractere atual
-
+```
 
 ## Desfazer
-
+```
 u ............ desfazer
 U ............ desfaz mudanças na última linha editada
 Ctrl-r  ...... refazer
-
+```
 
 ## Movendo
-
+```
 :n<Enter>  ..... vai para linha `n'
 ngg ............ vai para linha `n'
 nG ............. vai para linha `n
@@ -152,14 +152,14 @@ zz .... move a página de modo com que o cursor fique no
         centro
 n ..... move o cursor para a próxima ocorrência da busca
 N ..... move o cursor para a ocorrência anterior da busca
-
+```
 
 
 ## Indentando
-
+```
 >> ..... Indenta a linha atual
 ^t ..... Indenta a linha atual em modo de inserção
 ^d ..... Remove indentação em modo de inserção
 >ip .... indenta o parágrafo atual
-
+```
 
