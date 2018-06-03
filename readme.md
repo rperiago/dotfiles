@@ -7,24 +7,24 @@
 vim +10 /caminho/para/o/arquivo
 ```
 - Abrir o arquivo na linha que contém um determinado padrão 
-
+```
 vim +/padrão arquivo
-
+```
 - Abrir arquivo com o vim aberto
-
+```
 :e /home/usuario/arquivo
-
+```
 
 ## Insert
 
-
+```
 i ..... entra no modo de inserção antes do caractere atual
 I ..... entra no modo de inserção no começo da linha
 a ..... entra no modo de inserção após o caractere atual
 A ..... entra no modo de inserção no final da linha
 o ..... entra no modo de inserção uma linha abaixo
 O ..... entra em modo de inserção uma linha acima
-
+```
 
 
 ## Delete
