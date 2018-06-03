@@ -3,9 +3,9 @@
 ## Abrindo arquivos
 
 - Abre arquivo na linha 10
-'
+'''
 vim +10 /caminho/para/o/arquivo
-'
+'''`:
 - Abrir o arquivo na linha que contém um determinado padrão 
 
 vim +/padrão arquivo
