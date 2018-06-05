@@ -96,7 +96,7 @@ P .... cola o que foi copiado ou deletado acima
 ]p ... cola o que foi copiado ou deletado após o cursor
 ```
 
-## Mudançna
+## Mudança
 
 ```
 ciw .............. modifica uma palavra
