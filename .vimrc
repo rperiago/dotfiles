@@ -56,9 +56,12 @@ set background=dark
 colorscheme badwolf 
 
 " Configura Tabs
-set tabstop=4
-set softtabstop=4
-set expandtab
+" set tabstop=4
+"set softtabstop=4
+"set expandtab
 
 " Mostra comando na barra inferior
 set showcmd
+
+" Indent Custons
+filetype indent on
