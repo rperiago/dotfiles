@@ -6,6 +6,8 @@ Edite o arquivo .vimrc em $HOME/.vimrc
 
 inclua a linha: source $HOME/dotfiles/.vimrc
 
+copie o conteudo da pasta .vim/ para $HOME/.vim
+
 ```
 # Help Vim
 
