@@ -20,9 +20,7 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
+
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
@@ -45,13 +43,15 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " ---------------------------------------------------------------------------
-
+Plugin 'git@github.com:sjl/badwolf.git'
 
 " Configura numero de linhas relativas
 set number relativenumber
 
 " Configura syntax
-syntax on
+syntax enable
+set background=dark
+colorscheme badwolf 
 
 " Configura Tabs
 set tabstop=4
