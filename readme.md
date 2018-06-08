@@ -162,4 +162,7 @@ N ..... move o cursor para a ocorrência anterior da busca
 ^d ..... Remove indentação em modo de inserção
 >ip .... indenta o parágrafo atual
 ```
+## Créditos
 
+Autores: Ricardo Periago e Rodolfo Moi
+Fonte: (vimbook)[https://github.com/cassiobotaro/vimbook]
