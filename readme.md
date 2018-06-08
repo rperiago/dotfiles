@@ -1,8 +1,6 @@
-# Help do Vim
-
 [TOC]
 
-## Quick Start
+# Quick Start
 ```
 Clone este repositório em $HOME.
 
@@ -11,6 +9,7 @@ Edite o arquivo .vimrc em $HOME/.vimrc
 inclua a linha: source $HOME/dotfiles/.vimrc
 
 ```
+# Help Vim
 
 ## Abrindo arquivos
 
