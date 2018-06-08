@@ -48,7 +48,7 @@ Plugin 'git@github.com:sjl/badwolf.git'
 " Configura numero de linhas relativas
 set number relativenumber
 
-" Configura syntax
+" Configura syntax and color
 syntax enable
 set background=dark
 colorscheme badwolf 
