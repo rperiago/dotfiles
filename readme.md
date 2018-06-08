@@ -1,4 +1,13 @@
-# Help do Vim
+# Quick Start
+```
+Clone este repositório em $HOME.
+
+Edite o arquivo .vimrc em $HOME/.vimrc
+
+inclua a linha: source $HOME/dotfiles/.vimrc
+
+```
+# Help Vim
 
 ## Abrindo arquivos
 
@@ -164,5 +173,5 @@ N ..... move o cursor para a ocorrência anterior da busca
 ```
 ## Créditos
 
-Autores: Ricardo Periago e Rodolfo Moi
-Fonte: (vimbook)[https://github.com/cassiobotaro/vimbook]
+- Autores: Ricardo Periago e Rodolfo Moi
+- Fonte: [vimbook](https://github.com/cassiobotaro/vimbook)
