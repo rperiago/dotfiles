@@ -1,5 +1,7 @@
 # Help do Vim
 
+[TOC]
+
 ## Quick Start
 ```
 Clone este repositório em $HOME.
