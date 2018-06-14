@@ -43,6 +43,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 " A tree explorer plugin for vim.
 Plugin 'scrooloose/nerdtree'
 
+" Javascript language syntax
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 
