@@ -203,12 +203,4 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 
 " Languages Linters
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_args = "--config ~/Documents/linters/.eslintrc.js"
-
-" ==========================================================
-" Maps
-" ==========================================================
-
-" Ctrl-n toogle NERDtree
-map <C-n> :NERDTreeToggle<CR>
+" let g:syntastic_javascript_checkers = ['eslint']
