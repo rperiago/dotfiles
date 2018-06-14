@@ -40,6 +40,12 @@ Plugin 'vim-airline/vim-airline-themes'
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
 Plugin 'bronson/vim-trailing-whitespace'
 
+" A tree explorer plugin for vim.
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
 call vundle#end()
 
 " enable syntax files load
@@ -196,6 +202,12 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 
 " Languages Linters
-" let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_args = "--config ~/Documents/linters/.eslintrc.js"
 
+" ==========================================================
+" Maps
+" ==========================================================
 
+" Ctrl-n toogle NERDtree
+map <C-n> :NERDTreeToggle<CR>
