@@ -204,3 +204,8 @@ let g:syntastic_warning_symbol = '!'
 
 " Languages Linters
 " let g:syntastic_javascript_checkers = ['eslint']
+
+" ====================================================
+" Map clt+n to NerdTree
+" ====================================================
+map <C-n> :NERDTreeToggle<CR>
