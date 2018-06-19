@@ -204,7 +204,8 @@ let g:syntastic_warning_symbol = '!'
 
 " Languages Linters
 " let g:syntastic_javascript_checkers = ['eslint']
-
+let g:syntastic_checkers_python=['pycodestyle']
+let g:syntastic_python_pycodestyle_args='--ignore=E411'
 " ====================================================
 " Map clt+n to NerdTree
 " ====================================================
