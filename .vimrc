@@ -1,58 +1,22 @@
-" ==========================================================
-" Inicial Setup
-" ==========================================================
+set nocompatible
+syntax on
+set nowrap
+set encoding=utf8
 
-set nocompatible              " be iMproved, required
+"""" START Vundle Configuration 
+
+" Disable file type for vundle
 filetype off                  " required
-set encoding=utf-8
-" ==========================================================
-" Pluglins List and Configuration
-" ==========================================================
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" Molokai Theme
-Plugin 'tomasr/molokai'
-
-" git wrapper
-Plugin 'kablamo/vim-git-log'
-Plugin 'gregsexton/gitv'
-Plugin 'tpope/vim-fugitive'
-
-" vim commentary
-Plugin 'tpope/vim-commentary'
-
-" validation scripts
-Plugin 'scrooloose/syntastic'
-
-" A solid language pack for Vim.
-Plugin 'sheerun/vim-polyglot'
-
-" status and tabline
-Plugin 'vim-airline/vim-airline'
-
-" official theme repository for vim-airline
-Plugin 'vim-airline/vim-airline-themes'
-
-" Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-Plugin 'bronson/vim-trailing-whitespace'
-
-" A tree explorer plugin for vim.
-Plugin 'scrooloose/nerdtree'
-
-" Javascript language syntax
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/javascript-libraries-syntax.vim'
-
-" Go Leng
-" Plugin 'fatih/vim-go'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 " Utility
+Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'BufOnly.vim'
@@ -68,14 +32,15 @@ Plugin 'gilsondev/searchtasks.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
 
-" Generic Programming Support
-" Plugin 'jakedouglas/exuberant-ctags'
+" Generic Programming Support 
+Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tobyS/vmustache'
 Plugin 'janko-m/vim-test'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 
 " Markdown / Writting
@@ -84,7 +49,26 @@ Plugin 'tpope/vim-markdown'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
 
-" Elixir Support
+" Git Support
+Plugin 'kablamo/vim-git-log'
+Plugin 'gregsexton/gitv'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'jaxbot/github-issues.vim'
+
+" PHP Support
+Plugin 'phpvim/phpcd.vim'
+Plugin 'tobyS/pdv'
+
+" Erlang Support
+Plugin 'vim-erlang/vim-erlang-tags'
+Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'vim-erlang/vim-erlang-omnicomplete'
+Plugin 'vim-erlang/vim-erlang-compiler'
+
+" GoLang Suporte
+" Plugin 'fatih/vim-go'
+
+" Elixir Support 
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'avdgaag/vim-phoenix'
 Plugin 'mmorearty/elixir-ctags'
@@ -95,150 +79,47 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'jadercorrea/elixir_generator.vim'
 
+" Elm Support
+Plugin 'lambdatoast/elm.vim'
+
+" Theme / Interface
+Plugin 'tomasr/molokai'
+
 " OSX stupid backspace fix
 set backspace=indent,eol,start
 
-call vundle#end()
+call vundle#end()            " required
+filetype plugin indent on    " required
+"""" END Vundle Configuration 
 
-" enable syntax files load
-syntax on
+"""""""""""""""""""""""""""""""""""""
+" Configuration Section
+"""""""""""""""""""""""""""""""""""""
 
-" enable plugins file detection and indenting
-filetype plugin indent on
-
-" ==========================================================
-" Colors
-" ==========================================================
-
-" My color scheme
-colorscheme molokai
-let g:airline_theme='molokai'
-
-" ==========================================================
-" Spaces and Tabs
-" ==========================================================
-
-" Set tabs
-set tabstop=2 shiftwidth=2 softtabstop=2
-
-" tabs are spaces
-set expandtab
-
-" ==========================================================
-" File Types Indenting Config
-" ==========================================================
-
-" turns autoindent on
-set autoindent
-
-" does the right thing (mostly) in programs
-set smartindent
-
-" stricter rules for C programs
-set cindent
-
-" ==========================================================
-" UI Config
-" ==========================================================
-
-" show command in bottom bar
-set showcmd
-
-" highlight current line
-set cursorline
-
-" visual autocomplete for command menu
-set wildmenu
-
-" redraw only when we need to.
-set lazyredraw
-
-" highlight matching [{()}]
-set showmatch
-
-" show line numbers
-set number relativenumber
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
-
-" Always show current position
+" Show linenumbers
+set number
 set ruler
 
-" Height of the command bar
-set cmdheight=2
+" Set Proper Tabs
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
 
-" Add a bit extra margin to the left
-set foldcolumn=1
+" Always display the status line
+set laststatus=2
 
-" ==========================================================
-" Searching
-" ==========================================================
 
-" search as characters are entered
-set incsearch
+" Enable highlighting of the current line
+set cursorline
 
-" highlight matches
-set hlsearch
+colorscheme molokai
 
-" Space remove highlight serch
-nnoremap <space> :nohlsearch<CR>  " ,<space> close highlight
+" Vim-Airline Configuration
+let g:airline_powerline_fonts = 1 
+let g:airline_theme='molokai'
 
-" ==========================================================
-" Backspace Behavior
-" ==========================================================
-
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" ==========================================================
-" Folds Config
-" ==========================================================
-
-" enable folding
-set foldenable
-
-" open most folds by default
-set foldlevelstart=10
-
-" 10 nested fold max
-set foldnestmax=10
-
-" fold based on indent level
-set foldmethod=indent
-
-" ==========================================================
-" Errors Config
-" ==========================================================
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
-" ==========================================================
-" Backup Config
-" ==========================================================
-
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
-
-" ==========================================================
-" Syntastic Config
-" ==========================================================
-
+" Syntastic Configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -246,25 +127,16 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height=2
-
-" Better :sign interface symbols
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-
-" Languages Linters
-" let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_checkers_python=['pycodestyle']
-let g:syntastic_python_pycodestyle_args='--ignore=E411,I257,257'
-" ====================================================
-" Map clt+n to NerdTree
-" ====================================================
-map <C-n> :NERDTreeToggle<CR>
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_enable_elixir_checker = 1
+" let g:syntastic_elixir_checkers = ["elixir"]
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
 let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
+
+" Vim-PDV Configuration 
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 " Markdown Syntax Support
 augroup markdown
@@ -412,6 +284,8 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 """""""""""""""""""""""""""""""""""""
 " Mappings configurationn
 """""""""""""""""""""""""""""""""""""
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
 
 " Omnicomplete Better Nav
 inoremap <expr> <c-j> ("\<C-n>")
@@ -438,7 +312,7 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Shortcuts
-nnoremap <Leader>o :Files<CR>
+nnoremap <Leader>o :Files<CR> 
 nnoremap <Leader>O :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 
@@ -462,10 +336,10 @@ autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
 
 " Disable arrow movement, resize splits instead.
 if get(g:, 'elite_mode')
-	nnoremap <Up>    :resize +2<CR>
-	nnoremap <Down>  :resize -2<CR>
-	nnoremap <Left>  :vertical resize +2<CR>
-	nnoremap <Right> :vertical resize -2<CR>
+  nnoremap <Up>    :resize +2<CR>
+  nnoremap <Down>  :resize -2<CR>
+  nnoremap <Left>  :vertical resize +2<CR>
+  nnoremap <Right> :vertical resize -2<CR>
 endif
 
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
